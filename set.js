@@ -44,7 +44,8 @@
 	    /*'https://lampa32.github.io/snow.js',*/
 	    'http://45.67.35.16:9118/ts.js',
 	    'http://45.67.35.16:9118/nc.js',
-	    'https://bwa./s.js',
+	    'https://45.67.35.16:9118/sisi.js',
+	    'https://45.67.35.16:9118/ts-preload.js',
 	    'https://sb1969vb.github.io/proba/cub_off.js',
 	    'https://andreyurl54.github.io/diesel5/tricks.js',
 	    'http://llpp.in/ur/style.js',
