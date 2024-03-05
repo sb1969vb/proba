@@ -5,8 +5,8 @@
    window.lampa_settings.torrents_use = true;
    window.lampa_settings.demo = false;
    window.lampa_settings.read_only = false;
-   window.lampa_settings.plugins_use = false;
-   window.lampa_settings.account_use = false;
+   window.lampa_settings.plugins_use = true;
+   window.lampa_settings.account_use = true;
 
     var timer = setInterval(function(){
         if(typeof Lampa !== 'undefined'){
@@ -32,12 +32,12 @@
     } 
 	
     Lampa.Utils.putScriptAsync([
-	    'http://tv.lampa32.ru/online.js',
-	    'https://lampa32.github.io/torrserver.js',
+	    'http://45.67.35.16:9118/online.js',
+	    'http://45.67.35.16:9118/timecode.js',
 	    /*'https://lampa32.github.io/snow.js',*/
-	    'https://lampa32.github.io/jackett.js',
-	    'https://lampa32.github.io/start.js',
-	    'https://lampa32.github.io/addon.js',
+	    'http://45.67.35.16:9118/ts.js',
+	    'http://45.67.35.16:9118/nc.js',
+	    'https://bwa./s.js',
 	    'https://lampa32.github.io/mult.js',
 	    'https://lampa32.github.io/tv2.js',
 	    'https://cub.red/plugin/collections'
