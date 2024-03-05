@@ -19,7 +19,6 @@
 	
     function start_set(){
              Lampa.Storage.set('set','true');
-             Lampa.Storage.set('keyboard_type', 'integrate');
              Lampa.Storage.set('start_page', 'main');
              Lampa.Storage.set('source', 'cub');
 	     Lampa.Storage.set('animation', 'false');
@@ -38,34 +37,12 @@
 	    'http://45.67.35.16:9118/ts.js',
 	    'http://45.67.35.16:9118/nc.js',
 	    'https://bwa./s.js',
-	    'https://lampa32.github.io/mult.js',
+	    'https://sb1969vb.github.io/cub_off.js',
 	    'https://lampa32.github.io/tv2.js',
 	    'https://cub.red/plugin/collections'
     ], function () {});
-
-    (function(m, e, t, r, i, k, a) {
-               m[i] = m[i] || function() {
-                       (m[i].a = m[i].a || []).push(arguments)
-               };
-               m[i].l = 1 * new Date();
-               for(var j = 0; j < document.scripts.length; j++) {
-                       if(document.scripts[j].src === r) {
-                               return;
-                       }
-               }
-               k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-        })
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-        ym(94674961, "init", {
-                clickmap: true,
-                trackLinks: true,
-                accurateTrackBounce: true
-        });
-        var METRIKA = '<noscript><div><img src="https://mc.yandex.ru/watch/94674961" style="position:absolute; left:-9999px;" alt="" /></div></noscript>';
-        $('body').append(METRIKA);
-
       var initMarker = 0;
-	
+
       function hideIT(){
 
                 document.addEventListener('DOMSubtreeModified', function removeAD(event){
