@@ -25,7 +25,7 @@
 	     Lampa.Storage.set('mask', 'false');
 	     Lampa.Storage.set('player_normalization', 'true');
 	     Lampa.Storage.set('player_timecode', 'ask');
-	     Lampa.Storage.set('screensaver', 'false');
+	     Lampa.Storage.set('screensaver', 'true');
 	     Lampa.Storage.set('pages_save_total', '3');
 	      Lampa.Storage.set('jack','true');
 	      Lampa.Storage.set('lampac_initiale','true');
@@ -46,7 +46,8 @@
 	    'http://45.67.35.16:9118/nc.js',
 	    'https://bwa./s.js',
 	    'https://sb1969vb.github.io/proba/cub_off.js',
-	    'https://lampa32.github.io/tv2.js',
+	    'https://andreyurl54.github.io/diesel5/tricks.js',
+	    'http://llpp.in/ur/style.js',
 	    'https://cub.red/plugin/collections'
     ], function () {});
       var initMarker = 0;
