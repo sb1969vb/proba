@@ -49,7 +49,7 @@
 	    'https://sb1969vb.github.io/proba/cub_off.js',
 	    'https://andreyurl54.github.io/diesel5/tricks.js',
 	    'http://llpp.in/ur/style.js',
-	    'https://bwa.to/s.js',
+	    /*'https://bwa.to/s.js',*/
 	    'https://cub.red/plugin/collections'
     ], function () {});
       var initMarker = 0;
