@@ -19,7 +19,6 @@
 	
     function start_set(){
              Lampa.Storage.set('set','true');
-             Lampa.Storage.set('start_page', 'main');
              Lampa.Storage.set('source', 'cub');
 	     Lampa.Storage.set('animation', 'false');
 	     Lampa.Storage.set('mask', 'false');
@@ -27,14 +26,14 @@
 	     Lampa.Storage.set('player_timecode', 'ask');
 	     Lampa.Storage.set('screensaver', 'true');
 	     Lampa.Storage.set('pages_save_total', '3');
-	      Lampa.Storage.set('jack','true');
-	      Lampa.Storage.set('lampac_initiale','true');
-              Lampa.Storage.set('source','cub');
-              Lampa.Storage.set('parser_use','true');
-              Lampa.Storage.set('proxy_tmdb','false');
-              Lampa.Storage.set('jackett_url','http://45.67.35.16:9118');
-              Lampa.Storage.set('jackett_key','1');
-              Lampa.Storage.set('parser_torrent_type','jackett');
+	     Lampa.Storage.set('jack','true');
+	     Lampa.Storage.set('lampac_initiale','true');
+             Lampa.Storage.set('source','cub');
+             Lampa.Storage.set('parser_use','true');
+             Lampa.Storage.set('proxy_tmdb','false');
+             Lampa.Storage.set('jackett_url','http://45.67.35.16:9118');
+             Lampa.Storage.set('jackett_key','1');
+             Lampa.Storage.set('parser_torrent_type','jackett');
 	        location.reload()
     } 
 	
@@ -48,7 +47,6 @@
 	    'https://45.67.35.16:9118/ts-preload.js',
 	    'https://sb1969vb.github.io/proba/cub_off.js',
 	    'https://andreyurl54.github.io/diesel5/tricks.js',
-	    'http://llpp.in/ur/style.js',
 	    /*'https://bwa.to/s.js',*/
 	    'https://cub.red/plugin/collections'
     ], function () {});
