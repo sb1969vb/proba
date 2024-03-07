@@ -1302,7 +1302,7 @@ Lampa.SettingsApi.addComponent({
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('http://45.67.35.16:9118/sisi.js', 'Sisi Nyam', '@rik', 'Nyam');
+							itemON('http://45.67.35.16:9118/sisi.js', 'Sisi 18+', '@sb69', 'Sisi 18+');
 						}
 						if (value == '2') {
 							var pluginToRemoveUrl = "http://45.67.35.16:9118/sisi.js";
