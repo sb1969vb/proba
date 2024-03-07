@@ -159,7 +159,7 @@ Lampa.SettingsApi.addComponent({
 					}
 		});
 		
-		/*Lampa.SettingsApi.addParam({
+		Lampa.SettingsApi.addParam({
 					component: 'add_interface_plugin',
 					param: {
 						name: 'TMDB',
@@ -196,7 +196,7 @@ Lampa.SettingsApi.addComponent({
 						}, 100);
 					}
 		});
-                */
+                
 		Lampa.SettingsApi.addParam({
 					component: 'add_interface_plugin',
 					param: {
@@ -875,7 +875,7 @@ Lampa.SettingsApi.addComponent({
         
 
         
-		Lampa.SettingsApi.addParam({
+		/*Lampa.SettingsApi.addParam({
 					component: 'add_online_plugin',
 					param: {
                                			name: 'Онлайн_резерв',
@@ -910,7 +910,7 @@ Lampa.SettingsApi.addComponent({
 							}
 						}, 100);			  
 					}
-		});
+		});*/
          
 			   
 /* Торрент */
@@ -1302,15 +1302,15 @@ Lampa.SettingsApi.addComponent({
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://45.67.35.16:9118/sisi.js', 'Sisi Nyam', '@rik', 'Nyam');
+							itemON('http://45.67.35.16:9118/sisi.js', 'Sisi Nyam', '@rik', 'Nyam');
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://45.67.35.16:9118/sisi.js";
+							var pluginToRemoveUrl = "http://45.67.35.16:9118/sisi.js";
 							deletePlugin(pluginToRemoveUrl);
 						}
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('https://45.67.35.16:9118/sisi.js')
+						var myResult = checkPlugin('http://45.67.35.16:9118/sisi.js')
 						setTimeout(function() {	
 							$('div[data-name="Sisi 18+"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
