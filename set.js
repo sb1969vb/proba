@@ -39,7 +39,7 @@
 	
     Lampa.Utils.putScriptAsync([
 	    'https://sb1969vb.github.io/proba/cub_off.js',
-   
+            'https://sb1969vb.github.io/proba/addon.js',
 	    'https://cub.red/plugin/collections'
     ], function () {});
       var initMarker = 0;
