@@ -38,16 +38,8 @@
     } 
 	
     Lampa.Utils.putScriptAsync([
-	    'http://45.67.35.16:9118/online.js',
-	    'http://45.67.35.16:9118/timecode.js',
-	    /*'https://lampa32.github.io/snow.js',*/
-	    'http://45.67.35.16:9118/ts.js',
-	    'http://45.67.35.16:9118/nc.js',
-	    'http://45.67.35.16:9118/sisi.js',
-	    'https://45.67.35.16:9118/ts-preload.js',
 	    'https://sb1969vb.github.io/proba/cub_off.js',
-	    'https://andreyurl54.github.io/diesel5/tricks.js',
-	    /*'https://bwa.to/s.js',*/
+   
 	    'https://cub.red/plugin/collections'
     ], function () {});
       var initMarker = 0;
