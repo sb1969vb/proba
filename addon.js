@@ -52,17 +52,6 @@ function settingsWatch() {
 		}, 1000)
 	}
 }
-/* Способ от Lampac -->
-function itemON(sourceURL, sourceName) {
-                   var script = document.createElement ('script');
-                   script.src = sourceURL;
-                   document.getElementsByTagName ('head')[0].appendChild (script);
-			setTimeout(function() {
-			   Lampa.Settings.update();
-			   Lampa.Noty.show("Плагин " + sourceName + " успешно установлен")
-			}, 300);
-};
---> */
 
 function itemON(sourceURL, sourceName, sourceAuthor, itemName) {
 if ($('DIV[data-name="' + itemName + '"]').find('.settings-param__status').hasClass('active')) {Lampa.Noty.show("Плагин уже установлен!")} else {	
@@ -335,15 +324,15 @@ Lampa.SettingsApi.addComponent({
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://lampa32.github.io/interface.js', 'Стильный Интерфейс', '@lampa', 'Style_Interface32');
+							itemON('https://sb1969vb.github.io/proba/interface.js', 'Стильный Интерфейс', '@lampa', 'Style_Interface32');
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://lampa32.github.io/interface.js";
+							var pluginToRemoveUrl = "https://sb1969vb.github.io/proba/interface.js";
 							deletePlugin(pluginToRemoveUrl);
 						}
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						var myResult = checkPlugin('https://lampa32.github.io/interface.js')
+						var myResult = checkPlugin('https://sb1969vb.github.io/proba/interface.js')
 						setTimeout(function() {	
 							$('div[data-name="Style_Interface32"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -443,15 +432,15 @@ Lampa.SettingsApi.addComponent({
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://lampa32.github.io/weather.js', 'Погода', '@lampishe', 'Weather');
+						       itemON('https://sb1969vb.github.io/proba/weather.js', 'Погода', '@lampishe', 'Weather');
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://lampa32.github.io/weather.js";
+							var pluginToRemoveUrl = "https://sb1969.github.io/proba/weather.js";
 							deletePlugin(pluginToRemoveUrl);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						var myResult = checkPlugin('https://lampa32.github.io/weather.js')
+						var myResult = checkPlugin('https://sb1969vb.github.io/proba/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -557,19 +546,19 @@ Lampa.SettingsApi.addComponent({
 						},
 					field: {
                                     name: 'Синхронизация тайм-кодов',
-                                    description: 'Плагин синхронизирует ваши тайм-коды между устройствами. Чтобы не пересекаться с другими пользователями, нужно зарегистрироваться на сайте http://cub.watch и зайти в аккаунт в приложении Lampa'
+                                    description: 'Плагин синхронизирует ваши тайм-коды между устройствами. Чтобы не пересекаться с другими пользователями, нужно зайти в аккаунт в приложении Lampa'
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('http://79.137.204.8:9118/timecode.js', 'Синхронизация Тайм-Кодов', '@lampa32', 'Timecode32');
+							itemON('http://45.67.35.16:9118/timecode.js', 'Синхронизация Тайм-Кодов', '@lampa32', 'Timecode32');
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "http://79.137.204.8:9118/timecode.js";
+							var pluginToRemoveUrl = "http://45.67.35.16:9118/timecode.js";
 							deletePlugin(pluginToRemoveUrl);
 						}
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('http://79.137.204.8:9118/timecode.js')
+						var myResult = checkPlugin('http://45.67.35.16:9118/timecode.js')
 						setTimeout(function() {	
 							$('div[data-name="Timecode32"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -617,43 +606,7 @@ Lampa.SettingsApi.addComponent({
 					}
 		});
        
-		Lampa.SettingsApi.addParam({
-					component: 'add_management_plugin',
-					param: {
-						name: 'New_Version',
-						type: 'select',																																		
-						values: {
-							1:	'Установить',
-							2:	'Удалить',
-						},
-					//default: '1',
-						},
-					field: {
-						name: 'Проверка новой версии',
-						description: 'Проверяет наличие новой версии приложения на Android TV'
-					},
-					onChange: function(value) {
-						if (value == '1') {
-							itemON('https://nemiroff.github.io/lampa/updater.js', 'Проверка Новой Версии', '@nemiroff', 'New_Version');
-							}
-						if (value == '2') {
-							var pluginToRemoveUrl = "https://nemiroff.github.io/lampa/updater.js";
-							deletePlugin(pluginToRemoveUrl);
-						}
-					},
-					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('https://nemiroff.github.io/lampa/updater.js')
-						setTimeout(function() {	
-							$('div[data-name="New_Version"]').append('<div class="settings-param__status one"></div>')
-							if (myResult) {
-								$('div[data-name="New_Version"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
-							} else {
-								$('div[data-name="New_Version"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
-							}
-						}, 100);
-					}
-		});
-       
+	       
 		Lampa.SettingsApi.addParam({
 					component: 'add_management_plugin',
 					param: {
@@ -883,7 +836,7 @@ Lampa.SettingsApi.addComponent({
 	        Lampa.SettingsApi.addParam({
 					component: 'add_online_plugin',
 					param: {
-						name: 'Filmix_online',
+						name: 'Online',
 						type: 'select',
 					values: {
 						1:	'Установить',
@@ -892,146 +845,40 @@ Lampa.SettingsApi.addComponent({
 					//default: '1',
 					},
 					field: {
-						name: 'Filmix',
+						name: 'Online_sb69',
 						description: 'Плагин позволяет смотреть фильмы и сериалы онлайн в хорошем качестве'
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('http://freebie.tom.ru/filmix.js', 'Filmix', '@VitalikPVA', 'Filmix_online');
+							itemON('http://45.67.35.16:9118/online.js', 'Online', '@sb69', 'Online_sb69');
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "http://freebie.tom.ru/filmix.js";
+							var pluginToRemoveUrl = "http://45.16.35.16:9118/online.js";
 							deletePlugin(pluginToRemoveUrl);
 						}
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('http://freebie.tom.ru/filmix.js')
+						var myResult = checkPlugin('http://45.67.35.16:9118/online.js')
 						setTimeout(function() {	
-							$('div[data-name="Filmix_online"]').append('<div class="settings-param__status one"></div>')
+							$('div[data-name="online_sb69"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
-								$('div[data-name="Filmix_online"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
+								$('div[data-name="Online_sb69"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
 							} else {
-								$('div[data-name="Filmix_online"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
+								$('div[data-name="Online_sb69"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);		  
 					}
         });
                  
-		Lampa.SettingsApi.addParam({
-					component: 'add_online_plugin',
-					param: {
-						name: 'Modss',
-						type: 'select',
-					values: {
-						1:	'Установить',
-						2:	'Удалить',
-					},
-					//default: '1',
-					},
-					field: {
-						name: 'Modss',
-						description: 'Плагин позволяет смотреть фильмы и сериалы в онлайн. На выбор доступно 17 балансеров и различные дополнения через меню настроек Modss. VIP 4K можно подключить через телеграм-бота @modssmy_bot'
-					},
-					onChange: function(value) {
-						if (value == '1') {
-							itemON('http://lampa.stream/modss', 'Modss', '@Nikolai4', 'Modss');
-						}
-						if (value == '2') {
-							var pluginToRemoveUrl = "http://lampa.stream/modss";
-							deletePlugin(pluginToRemoveUrl);
-						}
-					},
-					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('http://lampa.stream/modss')
-						setTimeout(function() {	
-							$('div[data-name="Modss"]').append('<div class="settings-param__status one"></div>')
-							if (myResult) {
-								$('div[data-name="Modss"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
-							} else {
-								$('div[data-name="Modss"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
-							}
-						}, 100);		  
-					}
-        });
+
+        
+        
+
         
 		Lampa.SettingsApi.addParam({
 					component: 'add_online_plugin',
 					param: {
-                                		name: 'Online_Mod',
-						type: 'select',
-						values: {
-							1:	'Установить',
-							2:	'Удалить',
-					},
-					//default: '1',
-              				},
-					field: {
-						name: 'Online_Mod',
-						description: 'Плагин позволяет смотреть фильмы и сериалы в онлайн. На выбор доступно 7 балансеров'
-					},
-					onChange: function(value) {
-						if (value == '1') {
-							itemON('https://nb557.github.io/plugins/online_mod.js', 'Online Mod', '@t_anton', 'Online_Mod');
-						}
-						if (value == '2') {
-							var pluginToRemoveUrl = "https://nb557.github.io/plugins/online_mod.js";
-							deletePlugin(pluginToRemoveUrl);
-						}
-					},
-					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('https://nb557.github.io/plugins/online_mod.js')
-						setTimeout(function() {	
-							$('div[data-name="Online_Mod"]').append('<div class="settings-param__status one"></div>')
-							if (myResult) {
-								$('div[data-name="Online_Mod"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
-							} else {
-								$('div[data-name="Online_Mod"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
-							}
-						}, 100);			  
-					}
-        });
-        
-		Lampa.SettingsApi.addParam({
-					component: 'add_online_plugin',
-					param: {
-                                		name: 'Онлайн_Prestige',
-						type: 'select',
-						values: {
-							1:	'Установить',
-							2:	'Удалить',
-					},
-					//default: '1',
-					},
-					field: {
-						name: 'Онлайн Prestige',
-						description: 'Аналог плагина Online от разработчика приложения Lampa, но с новым информативным интерфейсом для просмотра фильмов и сериалов в онлайн'
-					},
-					onChange: function(value) {
-						if (value == '1') {
-							itemON('https://bwa.to/plugins/prestige.js', 'Онлайн Prestige', '@lampa', 'Онлайн_Prestige');
-						}
-						if (value == '2') {
-							var pluginToRemoveUrl = "https://bwa.to/plugins/prestige.js";
-							deletePlugin(pluginToRemoveUrl);
-						}
-               },
-					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('https://bwa.to/plugins/prestige.js')
-						setTimeout(function() {	
-							$('div[data-name="Онлайн_Prestige"]').append('<div class="settings-param__status one"></div>')
-							if (myResult) {
-								$('div[data-name="Онлайн_Prestige"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
-							} else {
-								$('div[data-name="Онлайн_Prestige"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
-							}
-						}, 100);				  
-					}
-        });
-        
-		Lampa.SettingsApi.addParam({
-					component: 'add_online_plugin',
-					param: {
-                               			name: 'Онлайн_BWA',
+                               			name: 'Онлайн_резерв',
                    				type: 'select',
                    				values: {
 							1:	'Установить',
@@ -1040,12 +887,12 @@ Lampa.SettingsApi.addComponent({
 					//default: '1',
                				},
 					field: {
-                                  		name: 'Онлайн BWA',
-                                  		description: 'Плагин для просмотра фильмов и сериалов в онлайн'
+                                  		name: 'Онлайн резерв',
+                                  		description: 'Плагин для просмотра фильмов и сериалов в онлайн резервный'
 					},
                            		onChange: function(value) {
 					if (value == '1') {
-						itemON('https://bwa.to/o', 'Онлайн BWA', '@rik', 'Онлайн_BWA');
+						itemON('https://bwa.to/o', 'Онлайн резерв', '@sb69', 'Онлайн_резерв');
 					}
 					if (value == '2') {
 						var pluginToRemoveUrl = "https://bwa.to/o";
@@ -1055,68 +902,17 @@ Lampa.SettingsApi.addComponent({
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
 						var myResult = checkPlugin('https://bwa.to/o')
 						setTimeout(function() {	
-							$('div[data-name="Онлайн_BWA"]').append('<div class="settings-param__status one"></div>')
+							$('div[data-name="Онлайн_резерв"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
-								$('div[data-name="Онлайн_BWA"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
+								$('div[data-name="Онлайн_резерв"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
 							} else {
-								$('div[data-name="Онлайн_BWA"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
+								$('div[data-name="Онлайн_резерв"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);			  
 					}
 		});
          
-		/*Lampa.SettingsApi.addParam({
-					component: 'add_online_plugin',
-					param: {
-                                 		name: 'Ebuland',
-                       				type: 'select',
-                       				values: {
-							1:	'Установить',
-							2:	'Удалить',
-                       			},
-					//default: '1',
-                   			},
-					field: {
-						name: 'Ebu.land',
-						description: 'Плагин для просмотра фильмов и сериалов в высоком разрешении 4К, который доступен по подписке. Подробнее о подключении на сайте http://ebu.land'
-					},
-					onChange: function(value) {
-                        			if (value == '1') {
-                          			itemON('http://ebu.land/online.js', 'Ebu.land', '@rik', 'Ebuland');
-                        			}
-						if (value == '2') {
-							var pluginToRemoveUrl = "http://ebu.land/online.js";
-							deletePlugin(pluginToRemoveUrl);
-						}
-					},
-					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('http://ebu.land/online.js')
-						setTimeout(function() {	
-							$('div[data-name="Ebuland"]').append('<div class="settings-param__status one"></div>')
-							if (myResult) {
-								$('div[data-name="Ebuland"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
-							} else {
-								$('div[data-name="Ebuland"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
-							}
-						}, 100);			  
-					}
-		});*/
-	       /* Lampa.SettingsApi.addParam({
-                                  component: 'add_online_plugin',
-                                  param: {
-                                         name: 'Reboot_online_plugin',
-                                         type: 'static',
-                                  },
-                                  field: {
-                                         name: '<div class="settings-folder" style="padding:0!important"><div style="display: block; margin: 0 auto;height:2.3em;padding-right:.1em"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g style="fill:none;stroke:#ffffff;stroke-width:12px;stroke-linecap:round;stroke-linejoin:round;"> <path d="m 50,10 0,35"></path> <path d="M 20,29 C 4,52 15,90 50,90 85,90 100,47 74,20"></path> </g> <path style="fill:#ffffff;" d="m 2,21 29,-2 2,29"></path> </g></svg></div></div>',
-					 description: '<div style="text-align: center;">Нажмите для перезагрузки Lampa</div>',
-	                           },
-                                   onRender: function (item) {
-                                      item.on('hover:enter', function(){
-                                         location.reload();
-                                      });
-                                   }
-		}); */			   
+			   
 /* Торрент */
 		Lampa.Settings.listener.follow('open', function (e) {
 					if (e.name == 'main') {
@@ -1146,44 +942,7 @@ Lampa.SettingsApi.addComponent({
 						});
 					}
 		});
-                /*     
-		Lampa.SettingsApi.addParam({
-					component: 'add_torrent_plugin',
-					param: {
-						name: 'Switch_Parser',
-						type: 'select',
-						values: {
-							1:	'Установить',
-							2:	'Удалить',
-						},
-					//default: '1',
-                  			},
-					field: {
-						name: 'Переключение парсеров',
-						description: 'Плагин позволяет переключаться между парсерами jackett из списка с уже забитыми правильными параметрами. В настройках парсера появится пункт со списком общедоступных jacketts'
-					},
-					onChange: function(value) {
-						if (value == '1') {
-							itemON('https://scabrum.github.io/plugins/jackett.js', 'Переключение Парсеров', '@AndreyURL54', 'Switch_Parser');
-						}
-						if (value == '2') {
-							var pluginToRemoveUrl = "https://scabrum.github.io/plugins/jackett.js";
-							deletePlugin(pluginToRemoveUrl);
-						}
-					},
-					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('https://scabrum.github.io/plugins/jackett.js')
-						setTimeout(function() {	
-							$('div[data-name="Switch_Parser"]').append('<div class="settings-param__status one"></div>')
-							if (myResult) {
-								$('div[data-name="Switch_Parser"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
-							} else {
-								$('div[data-name="Switch_Parser"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
-							}
-						}, 100);			  
-					}
-		});
-                */
+   
 		Lampa.SettingsApi.addParam({
 					component: 'add_torrent_plugin',
 					param: {
@@ -1220,43 +979,7 @@ Lampa.SettingsApi.addComponent({
 						}, 100);		  
 					}
 		});
-                /*
-	        Lampa.SettingsApi.addParam({
-					component: 'add_torrent_plugin',
-					param: {
-						name: 'Setting_torrents',
-						type: 'select',
-						values: {
-							1:	'Установить',
-							2:	'Удалить',
-						},
-					//default: '1',
-					},
-					field: {
-						name: 'Настройка торрентов (Web OS, Tizen)',
-						description: 'Плагин для ТВ, на которых Lampa установлена через официальные магазины LG Store и Tizen App Store. Включает в настройках отображение пунктов Парсер и Torrserver, необходимых для просмотра торрентов'
-					},
-					onChange: function(value) {
-						if (value == '1') {
-							itemON('http://cub.watch/plugin/etor', 'Настройка Торрентов', '@lampa', 'Setting_torrents');
-						}
-						if (value == '2') {
-							var pluginToRemoveUrl = "http://cub.watch/plugin/etor";
-							deletePlugin(pluginToRemoveUrl);
-                                                }
-					},
-					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('http://cub.watch/plugin/etor')
-						setTimeout(function() {	
-							$('div[data-name="Setting_torrents"]').append('<div class="settings-param__status one"></div>')
-							if (myResult) {
-								$('div[data-name="Setting_torrents"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
-							} else {
-								$('div[data-name="Setting_torrents"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
-							}
-						}, 100);		  
-					}
-		});*/
+
 	        Lampa.SettingsApi.addParam({
 					component: 'add_torrent_plugin',
 					param: {
@@ -1338,10 +1061,10 @@ Lampa.SettingsApi.addComponent({
 						});
 					}
 		});
-	       /* Lampa.SettingsApi.addParam({
+	        Lampa.SettingsApi.addParam({
 					component: 'add_tv_plugin',
 					param: {
-						name: 'Lampa32_TV',
+						name: 'Lampa69_TV',
 						type: 'select',
 						values: {
 							1:	'Установить',
@@ -1350,156 +1073,33 @@ Lampa.SettingsApi.addComponent({
 					//default: '1',
 					},
 					field: {
-						name: 'Lampa32 TV',
-						description: 'Плагин для бесплатного просмотра телеканалов'
+						name: 'Lampa69 TV',
+						description: 'Плагин для просмотра своих плейлистов IPTV'
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://lampa32.github.io/tv.js', 'Lampa32 TV', '@lampa32', 'Lampa32_TV');
+							itemON('https://cub.red/plugin/iptv.js', 'Lampa69 TV', '@sb69', 'Lampa69_TV');
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://lampa32.github.io/tv.js";
+							var pluginToRemoveUrl = "https://cub.red/plugin/iptv.js";
 							deletePlugin(pluginToRemoveUrl);
 						}
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('https://lampa32.github.io/tv.js')
+						var myResult = checkPlugin('https://cub.red/plugin/iptv.js')
 						setTimeout(function() {	
-							$('div[data-name="Lampa32_TV"]').append('<div class="settings-param__status one"></div>')
+							$('div[data-name="Lampa69_TV"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
-								$('div[data-name="Lampa32_TV"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
+								$('div[data-name="Lampa69_TV"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
 							} else {
-								$('div[data-name="Lampa32_TV"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
-							}
-						}, 100);
-					}
-		});*/
-		Lampa.SettingsApi.addParam({
-					component: 'add_tv_plugin',
-					param: {
-						name: 'Diesel',
-						type: 'select',
-						values: {
-							1:	'Установить',
-							2:	'Удалить',
-						},
-					//default: '1',
-					},
-					field: {
-						name: 'Дизель ТВ',
-						description: 'Плагин для бесплатного просмотра телеканалов и коммерческих плейлистов с телепрограммой и записью архива'
-					},
-					onChange: function(value) {
-						if (value == '1') {
-							itemON('https://andreyurl54.github.io/diesel5/diesel.js', 'Дизель ТВ', '@AndreyURL54', 'Diesel');
-						}
-						if (value == '2') {
-							var pluginToRemoveUrl = "https://andreyurl54.github.io/diesel5/diesel.js";
-							deletePlugin(pluginToRemoveUrl);
-						}
-					},
-					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('https://andreyurl54.github.io/diesel5/diesel.js')
-						setTimeout(function() {	
-							$('div[data-name="Diesel"]').append('<div class="settings-param__status one"></div>')
-							if (myResult) {
-								$('div[data-name="Diesel"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
-							} else {
-								$('div[data-name="Diesel"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
+								$('div[data-name="Lampa69_TV"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);
 					}
 		});
 		
-		Lampa.SettingsApi.addParam({
-					component: 'add_tv_plugin',
-					param: {
-						name: 'Kulik',
-                        			type: 'select',
-                        			values: {
-							1:	'Установить',
-							2:	'Удалить',
-                        		},
-					//default: '1',
-					},
-					field: {
-						name: 'Kulik',
-						description: 'Плагин для просмотра IPTV каналов, отсортированных по различным категориям. Есть возможность поменять стиль плагина, сервер вещания, а также добавить каналы в избранное'
-					},
-					onChange: function(value) {
-						if (value == '1') {
-							itemON('http://cdn.kulik.uz/cors', 'Kulik TV', '@SawamuraRen', 'Kulik');
-						}
-						if (value == '2') {
-							var pluginToRemoveUrl = "http://cdn.kulik.uz/cors";
-							deletePlugin(pluginToRemoveUrl);
-						}
-					},
-					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('http://cdn.kulik.uz/cors')
-						setTimeout(function() {	
-							$('div[data-name="Kulik"]').append('<div class="settings-param__status one"></div>')
-							if (myResult) {
-								$('div[data-name="Kulik"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
-							} else {
-								$('div[data-name="Kulik"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
-							}
-						}, 100);
-					}
-		});
-
-		Lampa.SettingsApi.addParam({
-					component: 'add_tv_plugin',
-					param: {
-						name: 'IPTV',
-						type: 'select',
-						values: {
-							1:	'Установить',
-							2:	'Удалить',
-						},
-					//default: '1',
-					},
-					field: {
-							name: 'IPTV',
-							description: 'Плагин для просмотра IPTV каналов. Сортировка каналов по группам и возможность добавить каналы в избранное. Работает только со своим плейлистом, добавленным на сайте https://cub.watch/iptv'
-					},
-					onChange: function(value) {
-						if (value == '1') {
-							itemON('http://cub.red/plugin/iptv', 'IPTV', '@lampa', 'IPTV');
-						}
-						if (value == '2') {
-							var pluginToRemoveUrl = "http://cub.red/plugin/iptv";
-							deletePlugin(pluginToRemoveUrl);
-						}
-					},
-					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('http://cub.red/plugin/iptv')
-						setTimeout(function() {	
-							$('div[data-name="IPTV"]').append('<div class="settings-param__status one"></div>')
-							if (myResult) {
-								$('div[data-name="IPTV"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
-							} else {
-								$('div[data-name="IPTV"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
-							}
-						}, 100);
-					}
-		});
-	       /* Lampa.SettingsApi.addParam({
-                                  component: 'add_tv_plugin',
-                                  param: {
-                                         name: 'Reboot_tv_plugin',
-                                         type: 'static',
-                                  },
-                                  field: {
-                                         name: '<div class="settings-folder" style="padding:0!important"><div style="display: block; margin: 0 auto;height:2.3em;padding-right:.1em"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g style="fill:none;stroke:#ffffff;stroke-width:12px;stroke-linecap:round;stroke-linejoin:round;"> <path d="m 50,10 0,35"></path> <path d="M 20,29 C 4,52 15,90 50,90 85,90 100,47 74,20"></path> </g> <path style="fill:#ffffff;" d="m 2,21 29,-2 2,29"></path> </g></svg></div></div>',
-					 description: '<div style="text-align: center;">Нажмите для перезагрузки Lampa</div>',
-	                           },
-                                   onRender: function (item) {
-                                      item.on('hover:enter', function(){
-                                         location.reload();
-                                      });
-                                   }
-		}); */			   
+		
+			   
 
 		Lampa.Settings.listener.follow('open', function (e) {
 					if (e.name == 'main') {
@@ -1666,7 +1266,7 @@ Lampa.SettingsApi.addComponent({
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://bwa.to/s', 'Клубничка', '@rik', 'Sisi');
+							itemON('https://bwa.to/s', 'Клубничка', '@sb69', 'Sisi');
 						}
 						if (value == '2') {
 							var pluginToRemoveUrl = "https://bwa.to/s";
@@ -1688,7 +1288,7 @@ Lampa.SettingsApi.addComponent({
 	        Lampa.SettingsApi.addParam({
 					component: 'add_sisi_plugin',
 					param: {
-						name: 'Nyam',
+						name: '18+',
 						type: 'select',
 						values: {
 							1:	'Установить',
@@ -1697,26 +1297,26 @@ Lampa.SettingsApi.addComponent({
 						//default: '1',
 					},
 					field: {
-						name: 'Sisi Nyam',
-						description: 'Другая версия плагина Клубничка (частично платная)'
+						name: 'Sisi 18+',
+						description: 'Другая версия плагина Клубничка ()'
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://sisi.am/nyam.js', 'Sisi Nyam', '@rik', 'Nyam');
+							itemON('https://45.67.35.16:9118/sisi.js', 'Sisi Nyam', '@rik', 'Nyam');
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://sisi.am/nyam.js";
+							var pluginToRemoveUrl = "https://45.67.35.16:9118/sisi.js";
 							deletePlugin(pluginToRemoveUrl);
 						}
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('https://sisi.am/nyam.js')
+						var myResult = checkPlugin('https://45.67.35.16:9118/sisi.js')
 						setTimeout(function() {	
-							$('div[data-name="Nyam"]').append('<div class="settings-param__status one"></div>')
+							$('div[data-name="Sisi 18+"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
-								$('div[data-name="Nyam"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
+								$('div[data-name="Sisi 18+"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
 							} else {
-								$('div[data-name="Nyam"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
+								$('div[data-name="Sisi 18+"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);		  
 					}
