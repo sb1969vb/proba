@@ -1114,15 +1114,15 @@ Lampa.SettingsApi.addComponent({
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://cub.red/plugin/iptv.js', 'Lampa69 TV', '@sb69', 'Lampa69_TV');
+							itemON('http://cub.red/plugin/iptv', 'Lampa69 TV', '@sb69', 'Lampa69_TV');
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://cub.red/plugin/iptv.js";
+							var pluginToRemoveUrl = "http://cub.red/plugin/iptv";
 							deletePlugin(pluginToRemoveUrl);
 						}
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('https://cub.red/plugin/iptv.js')
+						var myResult = checkPlugin('http://cub.red/plugin/iptv')
 						setTimeout(function() {	
 							$('div[data-name="Lampa69_TV"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
