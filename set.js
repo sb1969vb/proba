@@ -28,6 +28,10 @@
              Lampa.Storage.set('jackett_url','http://45.67.35.16:9118');
              Lampa.Storage.set('jackett_key','1');
              Lampa.Storage.set('parser_torrent_type','jackett');
+	     Lampa.Storage.set('torrserver_url','45.67.35.16:9118/ts');
+             Lampa.Storage.set('torrserver_auth','true');
+             Lampa.Storage.set('torrserver_login',Lampa.Storage.get('account_email') || 'ts');
+             Lampa.Storage.set('torrserver_password','ts');
 	        location.reload()
     } 
 	
