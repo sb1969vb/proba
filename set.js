@@ -5,7 +5,7 @@
    window.lampa_settings.torrents_use = true;
    window.lampa_settings.demo = false;
    window.lampa_settings.read_only = false;
-   window.lampa_settings.plugins_use = true;
+   window.lampa_settings.plugins_use = false;
    window.lampa_settings.account_use = true;
 
     var timer = setInterval(function(){
