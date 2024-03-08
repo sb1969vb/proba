@@ -159,7 +159,7 @@ Lampa.SettingsApi.addComponent({
 					}
 		});
 		
-		/*Lampa.SettingsApi.addParam({
+		Lampa.SettingsApi.addParam({
 					component: 'add_interface_plugin',
 					param: {
 						name: 'TMDB',
@@ -195,7 +195,7 @@ Lampa.SettingsApi.addComponent({
 							}
 						}, 100);
 					}
-		});*/
+		});
                 
 		Lampa.SettingsApi.addParam({
 					component: 'add_interface_plugin',
@@ -569,7 +569,7 @@ Lampa.SettingsApi.addComponent({
 						});
 					}
 		});
-                /*Lampa.SettingsApi.addParam({
+                Lampa.SettingsApi.addParam({
 					component: 'add_management_plugin',
 					param: {
                                		name: 'Timecode32',
@@ -604,7 +604,7 @@ Lampa.SettingsApi.addComponent({
 							}
 						}, 100);
 					}
-		});*/
+		});
 		Lampa.SettingsApi.addParam({
 					component: 'add_management_plugin',
 					param: {
@@ -680,7 +680,7 @@ Lampa.SettingsApi.addComponent({
 					}
 		});
        
-		/*Lampa.SettingsApi.addParam({
+		Lampa.SettingsApi.addParam({
 					component: 'add_management_plugin',
 					param: {
 						name: 'DLNA',
@@ -715,7 +715,7 @@ Lampa.SettingsApi.addComponent({
 							}
 						}, 100);			  
 					}
-		});*/
+		});
 	        Lampa.SettingsApi.addParam({
 					component: 'add_management_plugin',
 					param: {
@@ -850,7 +850,7 @@ Lampa.SettingsApi.addComponent({
 					}
 		});
 /* Онлайн */
-		/*Lampa.SettingsApi.addParam({
+		Lampa.SettingsApi.addParam({
 					component: 'add_plugin',
 					param: {
 						name: 'add_online_plugin',
@@ -904,7 +904,7 @@ Lampa.SettingsApi.addComponent({
 							}
 						}, 100);		  
 					}
-        });*/
+        });
                  
 
         
@@ -979,7 +979,7 @@ Lampa.SettingsApi.addComponent({
 					}
 		});
    
-		/*Lampa.SettingsApi.addParam({
+		Lampa.SettingsApi.addParam({
 					component: 'add_torrent_plugin',
 					param: {
 						name: 'Tracks',
@@ -1014,12 +1014,12 @@ Lampa.SettingsApi.addComponent({
 							}
 						}, 100);		  
 					}
-		});*/
+		});
 
-	       /* Lampa.SettingsApi.addParam({
+	        Lampa.SettingsApi.addParam({
 					component: 'add_torrent_plugin',
 					param: {
-						name: 'Torr_download',
+						name: 'Torr',
 						type: 'select',
 						values: {
 							1:	'Установить',
@@ -1033,25 +1033,25 @@ Lampa.SettingsApi.addComponent({
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://lampame.github.io/td/td.js', 'Закачка Торрентов', '@feliks', 'Torr_download');
+							itemON('http://45.67.35.16:9118/ts.js', 'Закачка Торрентов', '@feliks', 'Torr_download');
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://lampame.github.io/td/td.js";
+							var pluginToRemoveUrl = "http://45.67.35.16:9118/ts.js";
 							deletePlugin(pluginToRemoveUrl);
                                                 }
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('https://lampame.github.io/td/td.js')
+						var myResult = checkPlugin('http://45.67.35.16:9118/ts.js')
 						setTimeout(function() {	
-							$('div[data-name="Torr_download"]').append('<div class="settings-param__status one"></div>')
+							$('div[data-name="Torr"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
-								$('div[data-name="Torr_download"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
+								$('div[data-name="Torr"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
 							} else {
-								$('div[data-name="Torr_download"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
+								$('div[data-name="Torr"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);		  
 					}
-		});*/
+		});
 	       /* Lampa.SettingsApi.addParam({
                                   component: 'add_torrent_plugin',
                                   param: {
