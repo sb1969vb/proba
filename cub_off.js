@@ -166,6 +166,10 @@
                 $("[data-action=feed]").eq(0).remove();
                 // удаляем раздел Подписки с главного меню
                 $("[data-action=subscribes]").eq(0).remove();
+		 // удаляем раздел о програме с главного меню 
+		$("[data-action=about]").eq(0).remove();
+		// удаляем раздел консоль с главного меню    
+                $("[data-action=console]").eq(0).remove();
             }
         });
     }
