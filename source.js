@@ -135,7 +135,7 @@
       var kp_rating = +elem.rating || +elem.ratingKinopoisk || 0;
       var title = elem.nameRu || elem.nameEn || elem.nameOriginal || '';
       var original_title = elem.nameOriginal || elem.nameEn || elem.nameRu || '';
-      var adult = true;
+      var adult = false;
       var result = {
         "source": SOURCE_NAME,
         "type": type,
