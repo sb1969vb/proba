@@ -144,8 +144,8 @@
         "title": title,
         "original_title": original_title,
         "overview": elem.description || elem.shortDescription || '',
-        "img": 'https://corseu.sb69.workers.dev/'+ elem.posterUrlPreview ||'https://corseu.sb69.workers.dev/'+elem.posterUrl || ' ',
-        "background_image": elem.coverUrl || elem.posterUrl || elem.posterUrlPreview || 'https://corseu.sb69.workers.dev/',
+        "img": kp_prox + elem.posterUrlPreview ||kp_prox + elem.posterUrl || ' ',
+        "background_image": kp_prox + elem.coverUrl || kp_prox + elem.posterUrl || kp_prox + elem.posterUrlPreview || '',
         "genres": elem.genres && elem.genres.map(function (e) {
           if (e.genre === 'для взрослых') {
             adult = true;
