@@ -278,7 +278,7 @@
         "id": person.staffId,
         "name": person.nameRu || person.nameEn || '',
         "url": '',
-        "img": 'https://corseu.sb69.workers.dev/' +person.posterUrl || '',
+        "img": 'https://corseu.sb69.workers.dev/' + person.posterUrl || '',
         "character": person.description || '',
         "job": Lampa.Utils.capitalizeFirstLetter((person.professionKey || '').toLowerCase())
       };
