@@ -425,24 +425,24 @@
       }
 
       menu({}, function () {
-        var rus_id = countries_map['Россия'];
+        var rus_id = countries_map['СССР'];
 
         if (rus_id) {
           parts_data.splice(3, 0, function (call) {
             getList('api/v2.2/films?order=NUM_VOTE&countries=' + rus_id + '&type=FILM', params, function (json) {
-              json.title = 'Популярные российские фильмы';
+              json.title = 'Популярные фильмы';
               call(json);
             }, call);
           });
           parts_data.splice(5, 0, function (call) {
             getList('api/v2.2/films?order=NUM_VOTE&countries=' + rus_id + '&type=TV_SERIES', params, function (json) {
-              json.title = 'Популярные российские сериалы';
+              json.title = 'Популярные  сериалы';
               call(json);
             }, call);
           });
           parts_data.splice(7, 0, function (call) {
             getList('api/v2.2/films?order=NUM_VOTE&countries=' + rus_id + '&type=MINI_SERIES', params, function (json) {
-              json.title = 'Популярные российские мини-сериалы';
+              json.title = 'Популярные  мини-сериалы';
               call(json);
             }, call);
           });
