@@ -629,7 +629,7 @@
             "id": p.personId,
             "name": p.nameRu || p.nameEn || '',
             "url": '',
-            "img": p.posterUrl || '',
+            "img": 'https://corseu.sb69.workers.dev/' + p.posterUrl || '',
             "gender": p.sex === 'MALE' ? 2 : p.sex === 'FEMALE' ? 1 : 0,
             "birthday": p.birthday,
             "place_of_birth": p.birthplace,
