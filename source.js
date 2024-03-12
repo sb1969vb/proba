@@ -400,22 +400,22 @@
         }, call);
       }, function (call) {
         getList('api/v2.2/films?order=NUM_VOTE&type=FILM', params, function (json) {
-          json.title = 'Популярные фильмы';
+          json.title = 'Популярные фильмы СССР';
           call(json);
         }, call);
       }, function (call) {
         getList('api/v2.2/films?order=NUM_VOTE&type=TV_SERIES', params, function (json) {
-          json.title = 'Популярные сериалы';
+          json.title = 'Популярные сериалы СССР';
           call(json);
         }, call);
       }, function (call) {
         getList('api/v2.2/films?order=NUM_VOTE&type=MINI_SERIES', params, function (json) {
-          json.title = 'Популярные мини-сериалы';
+          json.title = 'Популярные мини-сериалы СССР';
           call(json);
         }, call);
       }, function (call) {
         getList('api/v2.2/films?order=NUM_VOTE&type=TV_SHOW', params, function (json) {
-          json.title = 'Популярные телешоу';
+          json.title = 'Популярные телешоу СССР';
           call(json);
         }, call);
       }];
