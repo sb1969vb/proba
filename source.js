@@ -135,7 +135,7 @@
       var kp_rating = +elem.rating || +elem.ratingKinopoisk || 0;
       var title = elem.nameRu || elem.nameEn || elem.nameOriginal || '';
       var original_title = elem.nameOriginal || elem.nameEn || elem.nameRu || '';
-      var adult = false;
+      var adult = true;
       var result = {
         "source": SOURCE_NAME,
         "type": type,
@@ -278,7 +278,7 @@
         "id": person.staffId,
         "name": person.nameRu || person.nameEn || '',
         "url": '',
-        "img": person.posterUrl || '',
+        "img": 'https://corseu.sb69.workers.dev/' + person.posterUrl || '',
         "character": person.description || '',
         "job": Lampa.Utils.capitalizeFirstLetter((person.professionKey || '').toLowerCase())
       };
@@ -430,19 +430,19 @@
         if (rus_id) {
           parts_data.splice(3, 0, function (call) {
             getList('api/v2.2/films?order=NUM_VOTE&countries=' + rus_id + '&type=FILM', params, function (json) {
-              json.title = 'Популярные российские фильмы';
+              json.title = 'Популярные фильмы';
               call(json);
             }, call);
           });
           parts_data.splice(5, 0, function (call) {
             getList('api/v2.2/films?order=NUM_VOTE&countries=' + rus_id + '&type=TV_SERIES', params, function (json) {
-              json.title = 'Популярные российские сериалы';
+              json.title = 'Популярные  сериалы';
               call(json);
             }, call);
           });
           parts_data.splice(7, 0, function (call) {
             getList('api/v2.2/films?order=NUM_VOTE&countries=' + rus_id + '&type=MINI_SERIES', params, function (json) {
-              json.title = 'Популярные российские мини-сериалы';
+              json.title = 'Популярные мини-сериалы';
               call(json);
             }, call);
           });
