@@ -429,19 +429,19 @@
 
         if (rus_id) {
           parts_data.splice(3, 0, function (call) {
-            getList('api/v2.2/films?order=NUM_VOTE&countries=' + rus_id + '&type=FILM', params, function (json) {
+            getList('api/v2.2/films/search-by-filters?order=NUM_VOTE&countries=' + rus_id + '&type=FILM', params, function (json) {
               json.title = 'Популярные фильмы СССР';
               call(json);
             }, call);
           });
           parts_data.splice(5, 0, function (call) {
-            getList('api/v2.2/films?order=NUM_VOTE&countries=' + rus_id + '&type=TV_SERIES', params, function (json) {
+            getList('api/v2.2/films/search-by-filters?order=NUM_VOTE&countries=' + rus_id + '&type=TV_SERIES', params, function (json) {
               json.title = 'Популярные  сериалы СССР';
               call(json);
             }, call);
           });
           parts_data.splice(7, 0, function (call) {
-            getList('api/v2.2/films?order=NUM_VOTE&countries=' + rus_id + '&type=MINI_SERIES', params, function (json) {
+            getList('api/v2.2/films/search-by-filters?order=NUM_VOTE&countries=' + rus_id + '&type=MINI_SERIES', params, function (json) {
               json.title = 'Популярные  мини-сериалы СССР';
               call(json);
             }, call);
@@ -542,7 +542,7 @@
       var method = params.url;
 
       if (method === '' && params.genres) {
-        method = 'api/v2.2/films?order=NUM_VOTE&genres=' + params.genres;
+        method = 'api/v2.2/films/search-by-filters?order=NUM_VOTE&genres=' + params.genres;
       }
 
       getList(method, params, oncomplite, onerror);
