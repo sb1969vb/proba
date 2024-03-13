@@ -399,22 +399,22 @@
           call(json);
         }, call);
       }, function (call) {
-        getList('api/v2.2/films/search-by-filters?order=NUM_VOTE&type=FILM', params, function (json) {
+        getList('api/v2.2/films/?order=NUM_VOTE&type=FILM', params, function (json) {
           json.title = 'Популярные фильмы ';
           call(json);
         }, call);
       }, function (call) {
-        getList('api/v2.2/films/search-by-filters?order=NUM_VOTE&type=TV_SERIES', params, function (json) {
+        getList('api/v2.2/films?order=NUM_VOTE&type=TV_SERIES', params, function (json) {
           json.title = 'Популярные сериалы ';
           call(json);
         }, call);
       }, function (call) {
-        getList('api/v2.2/films/search-by-filters?order=NUM_VOTE&type=MINI_SERIES', params, function (json) {
+        getList('api/v2.2/films?order=NUM_VOTE&type=MINI_SERIES', params, function (json) {
           json.title = 'Популярные мини-сериалы ';
           call(json);
         }, call);
       }, function (call) {
-        getList('api/v2.2/films/search-by-filters?order=NUM_VOTE&type=TV_SHOW', params, function (json) {
+        getList('api/v2.2/films?order=NUM_VOTE&type=TV_SHOW', params, function (json) {
           json.title = 'Популярные телешоу ';
           call(json);
         }, call);
@@ -429,19 +429,19 @@
 
         if (rus_id) {
           parts_data.splice(3, 0, function (call) {
-            getList('api/v2.2/films/search-by-filters?order=NUM_VOTE&countries=' + rus_id + '&type=FILM', params, function (json) {
+            getList('api/v2.2/films?order=NUM_VOTE&countries=' + rus_id + '&type=FILM', params, function (json) {
               json.title = 'Популярные фильмы СССР';
               call(json);
             }, call);
           });
           parts_data.splice(5, 0, function (call) {
-            getList('api/v2.2/films/search-by-filters?order=NUM_VOTE&countries=' + rus_id + '&type=TV_SERIES', params, function (json) {
+            getList('api/v2.2/films?order=NUM_VOTE&countries=' + rus_id + '&type=TV_SERIES', params, function (json) {
               json.title = 'Популярные  сериалы СССР';
               call(json);
             }, call);
           });
           parts_data.splice(7, 0, function (call) {
-            getList('api/v2.2/films/search-by-filters?order=NUM_VOTE&countries=' + rus_id + '&type=MINI_SERIES', params, function (json) {
+            getList('api/v2.2/films?order=NUM_VOTE&countries=' + rus_id + '&type=MINI_SERIES', params, function (json) {
               json.title = 'Популярные  мини-сериалы СССР';
               call(json);
             }, call);
