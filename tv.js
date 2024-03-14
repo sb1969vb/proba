@@ -3557,7 +3557,7 @@
       '14': '14'
     }, '3');
     Lampa.Settings.listener.follow('open', function (e) {
-      if (e.name == 'iptv') {
+      /*if (e.name == 'iptv') {
         if (!Lampa.Account.hasPremium()) {
           var body = e.body.find('.scroll__body > div');
           var info = $("<div class=\"settings-param selector\" data-type=\"button\" data-static=\"\">\n                    <div class=\"settings-param__name\">".concat(Lampa.Lang.translate(''), "</div>\n                    <div class=\"settings-param__descr\">").concat(Lampa.Lang.translate(''), "</div>\n                </div>"));
@@ -3565,7 +3565,7 @@
           body.prepend('<div class="settings-param-title"><span>' + Lampa.Lang.translate('') + '</span></div>');
           body.prepend(info);
         }
-      }
+      }*/
 
       if (e.name == 'iptv_guide') {
         var status = e.body.find('.update-guide-status');
