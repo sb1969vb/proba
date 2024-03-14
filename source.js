@@ -387,7 +387,7 @@
       var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
       var oncomplite = arguments.length > 1 ? arguments[1] : undefined;
       var onerror = arguments.length > 2 ? arguments[2] : undefined;
-      var parts_limit = 5;
+      var parts_limit = 255;
       var parts_data = [function (call) {
         getList('api/v2.2/films/top?type=TOP_100_POPULAR_FILMS', params, function (json) {
           json.title = Lampa.Lang.translate('title_now_watch');
