@@ -3770,22 +3770,22 @@
         bg: 'Премахни от избрани'
       },
       iptv_playlist_empty: {
-        ru: 'К сожалению, на данный момент вы не добавили ни одного плейлиста. Чтобы начать просмотр контента, пожалуйста, перейдите на страницу <span class="iptv-link">' + domain + '/iptv</span> и добавьте хотя бы один плейлист.',
-        en: 'Sorry, you haven\'t added any playlist yet. To start watching content, please go to <span class="iptv-link">' + domain + '/iptv</span> and add at least one playlist.',
-        uk: 'На жаль, на даний момент ви не додали жодного плейлиста. Щоб розпочати перегляд контенту, будь ласка, перейдіть на сторінку <span class="iptv-link">' + domain + '/iptv</span> і додайте хоча б один плейлист.',
-        be: 'Нажаль, на дадзены момант вы не дадалі ніводнага плэйліста. Каб пачаць прагляд кантэнту, калі ласка, перайдзіце на старонку <span class="iptv-link">' + domain + '/iptv</span> і дадайце хаця б адзін плэйліст.',
-        zh: '抱歉，您还没有添加任何播放列表。 要开始观看内容，请转到 <span class="iptv-link">' + domain + '/iptv</span> 并添加至少一个播放列表。',
-        pt: 'Desculpe, você ainda não adicionou nenhuma lista de reprodução. Para começar a assistir o conteúdo, acesse <span class="iptv-link">' + domain + '/iptv</span> e adicione pelo menos uma lista de reprodução.',
-        bg: 'Съжалявам, още не сте добавили никаква листа. За да почнете да гледате, моля идете на <span class="iptv-link">' + domain + '/iptv</span> и добавете поне една листа.'
+        ru: 'К сожалению, на данный момент вы не добавили ни одного плейлиста. Чтобы начать просмотр контента, добавьте хотя бы один плейлист.',
+        en: 'Sorry, you haven\'t added any playlist yet. To start watching content, please go to  add at least one playlist.',
+        uk: 'На жаль, на даний момент ви не додали жодного плейлиста. Щоб розпочати перегляд контенту, будь ласка, додайте хоча б один плейлист.',
+        be: 'Нажаль, на дадзены момант вы не дадалі ніводнага плэйліста. Каб пачаць прагляд кантэнту, калі ласка, перайдзіце на старонку  дадайце хаця б адзін плэйліст.',
+        zh: '抱歉，您还没有添加任何播放列表。 要开始观看内容，请转到  并添加至少一个播放列表。',
+        pt: 'Desculpe, você ainda não adicionou nenhuma lista de reprodução. Para começar a assistir o conteúdo, acesse  e adicione pelo menos uma lista de reprodução.',
+        bg: 'Съжалявам, още не сте добавили никаква листа. За да почнете да гледате, моля идете на  добавете поне една листа.'
       },
       iptv_select_playlist_text: {
-        ru: 'Для того чтобы добавить свой плейлист, вам необходимо перейти на сайт <span class="iptv-link">' + domain + '/iptv</span> и добавить плейлист от вашего провайдера.',
+        ru: 'Добавьте плейлист от вашего провайдера.',
         en: 'In order to add your playlist, you need to go to <span class="iptv-link">' + domain + '/iptv</span> and add a playlist from your provider.',
-        uk: 'Щоб додати свій плейлист, вам необхідно перейти на сайт <span class="iptv-link">' + domain + '/iptv</span> і додати плейлист від вашого провайдера.',
-        be: 'Для таго каб дадаць свой плэйліст, вам неабходна перайсці на сайт <span class="iptv-link">' + domain + '/iptv</span> і дадаць плэйліст ад вашага правайдэра.',
-        zh: '要添加您的播放列表，您需要前往 <span class="iptv-link">' + domain + '/iptv</span> 并添加来自您的提供商的播放列表。',
-        pt: 'Para adicionar sua lista de reprodução, você precisa acessar <span class="iptv-link">' + domain + '/iptv</span> e adicionar uma lista de reprodução do seu provedor.',
-        bg: 'За да добавите ваша листа, трябва да отидете на <span class="iptv-link">' + domain + '/iptv</span> и да добавите листа от вашият доставчик на телевизия.'
+        uk: 'Додайте плейлист від вашого провайдера.',
+        be: 'Дадаць плэйліст ад вашага правайдэра.',
+        zh: '要添加您的播放列表，您需要前往 并添加来自您的提供商的播放列表。',
+        pt: ' e adicionar uma lista de reprodução do seu provedor.',
+        bg: 'Добавите листа от вашият доставчик на телевизия.'
       },
       iptv_updated: {
         ru: 'Обновлено',
