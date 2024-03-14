@@ -3562,7 +3562,7 @@
           var body = e.body.find('.scroll__body > div');
           var info = $("<div class=\"settings-param selector\" data-type=\"button\" data-static=\"\">\n                    <div class=\"settings-param__name\">".concat(Lampa.Lang.translate(''), "</div>\n                    <div class=\"settings-param__descr\">").concat(Lampa.Lang.translate(''), "</div>\n                </div>"));
           info.on('hover:enter', Lampa.Account.showCubPremium);
-          body.prepend('<div class="settings-param-title"><span>' + Lampa.Lang.translate('title_settings') + '</span></div>');
+          body.prepend('<div class="settings-param-title"><span>' + Lampa.Lang.translate('') + '</span></div>');
           body.prepend(info);
         }
       }
