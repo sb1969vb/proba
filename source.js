@@ -18,7 +18,7 @@
       var use_proxy = total_cnt >= 10 && good_cnt > total_cnt / 2;
       if (!use_proxy) total_cnt++;
       var kp_prox = 'https://corseu.sb69.workers.dev/';
-      var url = 'https://kinopoiskapiunofficial.tech/';
+      var url = 'https://corseu.sb69.workers.dev/https://kinopoiskapiunofficial.tech/';
       url += method;
       network.timeout(15000);
       network.silent((use_proxy ? kp_prox : '') + url, function (json) {
